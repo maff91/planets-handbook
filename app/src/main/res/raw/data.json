@@ -1,0 +1,514 @@
+{
+    "planets": [
+        {
+            "name": "Mercury",
+            "short_name": "ME",
+            "wiki": "https://en.wikipedia.org/wiki/Mercury_(planet)"
+        },
+        {
+            "name": "Venus",
+            "short_name": "VE",
+            "wiki": "https://en.wikipedia.org/wiki/Venus"
+        },
+        {
+            "name": "Earth",
+            "short_name": "EA",
+            "wiki": "https://en.wikipedia.org/wiki/Earth"
+        },
+        {
+            "name": "Mars",
+            "short_name": "MA",
+            "wiki": "https://en.wikipedia.org/wiki/Mars"
+        },
+        {
+            "name": "Jupiter",
+            "short_name": "JU",
+            "wiki": "https://en.wikipedia.org/wiki/Jupiter"
+        },
+        {
+            "name": "Saturn",
+            "short_name": "SA",
+            "wiki": "https://en.wikipedia.org/wiki/Saturn"
+        },
+        {
+            "name": "Uranus",
+            "short_name": "UR",
+            "wiki": "https://en.wikipedia.org/wiki/Uranus"
+        },
+        {
+            "name": "Neptune",
+            "short_name": "NE",
+            "wiki": "https://en.wikipedia.org/wiki/Neptune"
+        }  
+    ],
+
+    "categories": {
+        "Physical": {
+            "Radius" : {
+                "format": "$f Earths",
+                "values": {
+                    "Mercury": 0.383,
+                    "Venus": 0.9499,
+                    "Earth": 1,
+                    "Mars": 0.532,
+                    "Jupiter": 10.973,
+                    "Saturn": 9.1401,
+                    "Uranus": 3.7679,
+                    "Neptune": 3.8647 
+                }
+            },
+            "Mass": {
+                "format": "$f Earths",
+                "values": {
+                    "Mercury": 0.055,
+                    "Venus": 0.815,
+                    "Earth": 1,
+                    "Mars": 0.107,
+                    "Jupiter": 317.8,
+                    "Saturn": 95.159,
+                    "Uranus": 14.536,
+                    "Neptune": 17.147
+                }
+            },
+            "Density": {
+                "format": "$f g/cm3",
+                "values": {
+                    "Mercury": 5.427,
+                    "Venus": 5.243,
+                    "Earth": 5.514,
+                    "Mars": 0.9335,
+                    "Jupiter": 1.326,
+                    "Saturn": 0.687,
+                    "Uranus": 1.27,
+                    "Neptune": 1.638
+                }
+            },
+            "Gravity": {
+                "format": "$f g",
+                "values": {
+                    "Mercury": 0.38,
+                    "Venus": 0.904,
+                    "Earth": 1,
+                    "Mars": 0.376,
+                    "Jupiter": 2.528,
+                    "Saturn": 1.065,
+                    "Uranus": 0.886,
+                    "Neptune": 1.14
+                }
+            },
+            "Escape velocity": {
+                "format": "$f km/s",
+                "values": {
+                    "Mercury": 4.25,
+                    "Venus": 10.36,
+                    "Earth": 11.186,
+                    "Mars": 5.027,
+                    "Jupiter": 59.5,
+                    "Saturn": 35.5,
+                    "Uranus": 21.3,
+                    "Neptune": 23.5
+            },
+            "Day length": {
+                "format": "$f d",
+                "values": {
+                    "Mercury": 58.646,
+                    "Venus": 243.025,
+                    "Earth": 1,
+                    "Mars": 1.025957,
+                    "Jupiter": 0.4135,
+                    "Saturn": 0.4396,
+                    "Uranus": 0.718,
+                    "Neptune": 0.6713
+            },
+            "Min temp.": {
+                "format": "$f 0C",
+                "values": {
+                    "Mercury": -193,
+                    "Venus": 462,
+                    "Earth": -89.2,
+                    "Mars": -143,
+                    "Jupiter": -108,
+                    "Saturn": -139,
+                    "Uranus": -197.2,
+                    "Neptune": -201
+            },
+            "Max temp.": {
+                "format": "$f 0C",
+                "values": {
+                    "Mercury": 427,
+                    "Venus": 462,
+                    "Earth": 56.7,
+                    "Mars": 35,
+                    "Jupiter": -108,
+                    "Saturn": -139,
+                    "Uranus": -197.2,
+                    "Neptune": -201
+            }
+        },
+        "Orbit": {
+            "Aphelion": {
+                "format": "$f AU",
+                "values": {
+                    "Mercury": 0.466697,
+                    "Venus": 0.728213,
+                    "Earth": 1.017,
+                    "Mars": 1.6660,
+                    "Jupiter": 5.4588,
+                    "Saturn": 10.1238,
+                    "Uranus": 20.11,
+                    "Neptune": 30.33 
+            },
+            "Perihelion": {
+                "format": "$f AU",
+                "values": {
+                    "Mercury": 0.307499,
+                    "Venus": 718440,
+                    "Earth": 0.98327,
+                    "Mars": 1.3814,
+                    "Jupiter": 4.9501,
+                    "Saturn": 9.0412,
+                    "Uranus": 18.33,
+                    "Neptune": 29.81
+            },
+            "Orbital period": {
+                "format": "$f yr",
+                "values": {
+                    "Mercury": 0.240846,
+                    "Venus": 0.615198,
+                    "Earth": 1,
+                    "Mars": 1.8808,
+                    "Jupiter": 11.862,
+                    "Saturn": 29.4571,
+                    "Uranus": 84.0205,
+                    "Neptune": 164.8 
+            },
+            "Orbital speed": {
+                "format": "$f km/s",
+                "values": {
+                    "Mercury": 47.362,
+                    "Venus": 35.02,
+                    "Earth": 29.78,
+                    "Mars": 24.077,
+                    "Jupiter": 13.07,
+                    "Saturn": 9.68,
+                    "Uranus": 6.80,
+                    "Neptune": 5.43
+            },
+            "Satelites": {
+                "format": "$i",
+                "values": {
+                    "Mercury": 0,
+                    "Venus": 0,
+                    "Earth": 1,
+                    "Mars": 2,
+                    "Jupiter": 69,
+                    "Saturn": 62,
+                    "Uranus": 27,
+                    "Neptune": 14 
+            }
+        }
+    },
+
+    "probes": {
+        "Mariner 2": {
+            "countries": ["US"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Mariner_2"
+        },
+        "Mariner 4": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Mariner_4"
+        },
+        "Venera 4": {
+            "countries": ["USSR"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Venera_4"
+        },
+        "Mariner 5": { 
+            "countries": ["US"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Mariner_5"
+        },
+        "Venera 5": {
+            "countries": ["USSR"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Venera_5"
+        },
+        "Venera 6": {
+            "countries": ["USSR"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Venera_6"
+        },
+        "Mariner 6": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Mariner_6"
+        },
+        "Venera 7": {
+            "countries": ["USSR"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Venera_7"
+        },
+        "Mariner 7": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Mariner_7"
+        },
+        "Mariner 9": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Mariner_9"
+        },
+        "Mars 2": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Mars_2"
+        },
+        "Mars 3": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Mars_3"
+        },
+        "Venera 8": {
+            "countries": ["USSR"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Venera_8"
+        },  
+        "Pioneer 10": {
+            "countries": ["US"],
+            "planets": ["Jupiter"],
+            "wiki": "https://en.wikipedia.org/wiki/Pioneer_10"
+        },       
+        "Mars 5": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Mars_4"
+        },
+        "Mariner 10": {
+            "countries": ["US"],
+            "planets": ["Venus", "Mercury"],
+            "wiki": "https://en.wikipedia.org/wiki/Mariner_10"
+        },
+        "Pioneer 11": {
+            "countries": ["US"],
+            "planets": ["Jupiter", "Saturn"],
+            "wiki": "https://en.wikipedia.org/wiki/Pioneer_11"
+        },
+        "Mars 6": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Mars_6"
+        },
+        "Mars 7": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Mars_7"
+        },
+        "Venera 9": {
+            "countries": ["USSR"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Venera_9"
+        },
+        "Venera 10": {
+            "countries": ["USSR"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Venera_10"
+        },
+        "Viking 1": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Viking_1"
+        },
+        "Viking 2": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Viking_2"
+        },
+        "Pioneer Venus Orbiter": {
+            "countries": ["US"],
+            "planets": ["Venus", "Mercury"],
+            "wiki": "https://en.wikipedia.org/wiki/Pioneer_Venus_project"
+        },   
+        "Pioneer Venus Multiprobe": {
+            "countries": ["US"],
+            "planets": ["Venus", "Mercury"],
+            "wiki": "https://en.wikipedia.org/wiki/Pioneer_Venus_project"
+        },
+        "Venera 12": {
+            "countries": ["USSR"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Venera_12"
+        },
+        "Venera 11": {
+            "countries": ["USSR"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Venera_11"
+        },
+        "Voyager 1": {
+            "countries": ["US"],
+            "planets": ["Jupiter", "Saturn"],
+            "wiki": "https://en.wikipedia.org/wiki/Voyager_1"
+        },
+        "Voyager 2": {
+            "countries": ["US"],
+            "planets": ["Jupiter", "Saturn", "Uranus", "Neptune"],
+            "wiki": "https://en.wikipedia.org/wiki/Voyager_2"
+        },
+        "Venera 13": {
+            "countries": ["USSR"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Venera_13"
+        },
+        "Venera 14": {
+            "countries": ["USSR"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Venera_14"
+        },
+        "Venera 15": {
+            "countries": ["USSR"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Venera_15"
+        },
+        "Venera 16": {
+            "countries": ["USSR"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Venera_16"
+        },
+        "Vega 1": {
+            "countries": ["USSR"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Vega_1"
+        },
+        "Vega 2": {
+            "countries": ["USSR"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Vega_2"
+        },
+        "Phobos 2": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Phobos_2"
+        },
+        "Galileo": {
+            "countries": ["US", "DE"],
+            "planets": ["Venus", "Jupiter"],
+            "wiki": "https://en.wikipedia.org/wiki/Galileo_(spacecraft)"
+        },
+        "Magellan": {
+            "countries": ["US"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Magellan_(spacecraft)"
+        },
+        "Ulysses": {
+            "countries": ["US", "EU"],
+            "planets": ["Jupiter"],
+            "wiki": "https://en.wikipedia.org/wiki/Ulysses_probe"
+        },
+        "Mars Pathfinder": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Mars_Pathfinder"
+        },
+        "Mars Global Surveyor": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Mars_Global_Surveyor"
+        },
+        "Cassini": {
+            "countries": ["US", "EU", "IT"],
+            "planets": ["Venus", "Jupiter", "Saturn"],
+            "wiki": "https://en.wikipedia.org/wiki/Cassini%E2%80%93Huygens"
+        },
+        "Venus Express": {
+            "countries": ["EU"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Venus_Express"
+        },
+        "2001 Mars Odyssey": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/2001_Mars_Odyssey"
+        },
+        "Mars Express": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Mars_Express"
+        },
+        "MER-A \"Spirit\"": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Spirit_rover"
+        },
+        "MER-B \"Opportunity\"": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Opportunity_rover"
+        },
+        "Mars Reconnaissance Orbiter": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Mars_Reconnaissance_Orbiter"
+        },
+        "MESSENGER": {
+            "countries": ["US"],
+            "planets": ["Venus", "Mercury"],
+            "wiki": "https://en.wikipedia.org/wiki/MESSENGER"
+        },
+        "Rosetta": {
+            "countries": ["EU"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Rosetta_(spacecraft)"
+        },        
+        "New Horizons": {
+            "countries": ["US"],
+            "planets": ["Jupiter"],
+            "wiki": "https://en.wikipedia.org/wiki/New_Horizons"
+        },
+        "Phoenix": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Phoenix_(spacecraft)"
+        },
+        "Dawn": {
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Dawn_Mission"
+        },
+        "Akatsuki": {
+            "countries": ["JP"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/Akatsuki_(spacecraft)"
+        },
+        "IKAROS": {
+            "countries": ["JP"],
+            "planets": ["Venus"],
+            "wiki": "https://en.wikipedia.org/wiki/IKAROS"
+        },
+        "MSL Curiosity": { 
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Mars_Science_Laboratory"
+        },
+        "Mars Orbiter Mission": { 
+            "countries": ["IN"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/Mars_Orbiter_Mission"
+        },
+        "MAVEN": { 
+            "countries": ["US"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/MAVEN"
+        },
+        "ExoMars 2016": { 
+            "countries": ["EU", "RU"],
+            "planets": ["Mars"],
+            "wiki": "https://en.wikipedia.org/wiki/ExoMars_Programme"
+        },
+        "Juno": {
+            "countries": ["US"],
+            "planets": ["Jupiter"],
+            "wiki": "https://en.wikipedia.org/wiki/Juno_(spacecraft)"
+        }
+    }
+}
