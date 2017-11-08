@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Planets Handbook</string>
+    <string name="title_activity_about">About</string>
+    <string name="project_on_github">Project on Github</string>
+    <string name="app_author">Michael Shtutman</string>
+    <string name="created_by">Created by</string>
+
+    <string name="github_page">https://github.com/maff91/Planets-Handbook</string>
 </resources>
