@@ -194,7 +194,7 @@
                     "Uranus": 6.80,
                     "Neptune": 5.43
             },
-            "Satelites": {
+            "Satellites": {
                 "format": "$i",
                 "values": {
                     "Mercury": 0,
