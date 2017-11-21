@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Planets-Handbook.iml" filepath="$PROJECT_DIR$/Planets-Handbook.iml" />
       <module fileurl="file://$PROJECT_DIR$/PlanetsHandbook.iml" filepath="$PROJECT_DIR$/PlanetsHandbook.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

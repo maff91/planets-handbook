@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/dark_bg</item>
         <item name="colorPrimaryDark">@color/status_bar_bg</item>
         <item name="colorAccent">@color/dark_bg</item>
@@ -19,4 +19,19 @@
     </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Text Appearance -->
+
+    <style name="AppTheme.TextAppearance" parent="TextAppearance.AppCompat"/>
+
+    <style name="AppTheme.TextAppearance.Invisible" parent="AppTheme.TextAppearance">
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.TextAppearance.PlanetTitle" parent="AppTheme.TextAppearance">
+        <item name="android:textColor">@color/text_light_primary</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+
 </resources>

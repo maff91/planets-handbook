@@ -6,4 +6,10 @@
     <string name="created_by">Created by</string>
 
     <string name="github_page">https://github.com/maff91/Planets-Handbook</string>
+    <string name="about">About</string>
+    <string name="logo_content_description">Planets Handbook logo</string>
+    <string name="empty" />
+    <string name="planets">Planets</string>
+    <string name="planet_fig_content_description">Planet Illustration</string>
+    <string name="wiki_page">Wiki Page</string>
 </resources>
