@@ -5,7 +5,7 @@ package com.maff.planetshandbook.data
  */
 
 data class Parameter(
-        var name: String? = null,
+        var name: String,
         val format: String,
         val values: Map<String, Double>
 )

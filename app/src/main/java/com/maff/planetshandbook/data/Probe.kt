@@ -5,7 +5,7 @@ package com.maff.planetshandbook.data
  */
 
 data class Probe(
-        var name: String? = null,
+        var name: String,
         val wiki: String,
         val countries: List<String>,
         val planets: List<String>

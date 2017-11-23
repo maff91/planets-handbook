@@ -12,26 +12,34 @@ import java.io.*
 
 class JsonRepository @DebugLog constructor(@NonNull inputStream: InputStream) : Repository
 {
-    private var planets: Map<String, Planet>
-    private var categories: Map<String, Category>
-    private var probes: Map<String, Probe>
+    private val planets: Map<String, Planet>
+    private val categories: Map<String, Category>
+    private val probes: Map<String, Probe>
 //    private var probesByPlanet: MutableMap<String, MutableList<Probe>>
-    private var parameters: MutableMap<String, Parameter>
+    private val parameters: MutableMap<String, Parameter>
 
     init
     {
+        planets = LinkedHashMap()
+        categories = LinkedHashMap()
+        probes = LinkedHashMap()
+
         try {
             val db = Gson().fromJson(InputStreamReader(inputStream), JsonDatabase::class.java)
 
-            planets = db.planets
-            categories = db.categories
-            probes = db.probes
+            for(planet in db.planets) {
+                planets.put(planet.name, planet)
+            }
+
+            for(category in db.categories) {
+                categories.put(category.name, category)
+            }
+
+            for(probe in db.probes) {
+                probes.put(probe.name, probe)
+            }
         }
         catch (ex : Exception) {
-            planets = LinkedHashMap()
-            categories = LinkedHashMap()
-            probes = LinkedHashMap()
-
             Timber.e(ex)
         }
 
@@ -39,30 +47,14 @@ class JsonRepository @DebugLog constructor(@NonNull inputStream: InputStream) : 
         parameters = LinkedHashMap()
 
         // Perform mapping operations
-        fillNames()
         fillParametersMap()
 //        fillProbesPlanetMap()
-    }
-
-    private fun fillNames()
-    {
-        for(entry in planets) {
-            entry.value.name = entry.key
-        }
-
-        for(entry in categories) {
-            entry.value.name = entry.key
-        }
-
-        for(entry in probes) {
-            entry.value.name = entry.key
-        }
     }
 
     private fun fillParametersMap()
     {
         for(category in categories.values) {
-            parameters.putAll(category.parameters)
+            category.parameters.forEach { parameters.put(it.name, it) }
         }
     }
 
@@ -76,7 +68,6 @@ class JsonRepository @DebugLog constructor(@NonNull inputStream: InputStream) : 
 //            }
 //        }
 //    }
-
 
     override fun getAllPlanets(): Collection<Planet> {
         return planets.values
@@ -121,7 +112,7 @@ class JsonRepository @DebugLog constructor(@NonNull inputStream: InputStream) : 
         {
             // Remap the category params with their values
             val params = ArrayList<Pair<Parameter, Double>>()
-            for(param in category.parameters.values) {
+            for(param in category.parameters) {
                 params.add(Pair(param, param.values[name] ?: continue))
             }
 
@@ -135,7 +126,7 @@ class JsonRepository @DebugLog constructor(@NonNull inputStream: InputStream) : 
 
     // Support class representing database JSON file structure
     data class JsonDatabase(
-            val planets: Map<String, Planet>,
-            val categories: Map<String, Category>,
-            val probes: Map<String, Probe>)
+            val planets: List<Planet>,
+            val categories: List<Category>,
+            val probes: List<Probe>)
 }

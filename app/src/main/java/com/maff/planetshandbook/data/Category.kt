@@ -5,6 +5,6 @@ package com.maff.planetshandbook.data
  */
 
 data class Category(
-        var name: String? = null,
-        val parameters: Map<String, Parameter>
+        var name: String,
+        val parameters: List<Parameter>
 )

@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class Planet(
-        var name: String? = null,
+        var name: String,
         @SerializedName("short_name") val shortName: String,
         val wiki: String
 )
