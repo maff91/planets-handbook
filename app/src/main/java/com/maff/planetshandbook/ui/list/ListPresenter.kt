@@ -12,11 +12,6 @@ class ListPresenter(view: ListContract.View, repo: Repository) : ListContract.Pr
     private val repository = repo
     private val view = view
 
-    init
-    {
-        view.setPresenter(this)
-    }
-
     override fun start()
     {
         view.showPlanets(repository.getAllPlanets())

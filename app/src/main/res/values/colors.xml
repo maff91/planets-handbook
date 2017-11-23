@@ -5,4 +5,5 @@
     <color name="status_bar_bg">#0f0a0f</color>
     <color name="text_light_primary">#f2f2f2</color>
     <color name="text_dark_primary">#333333</color>
+    <color name="border">#cccccc</color>
 </resources>

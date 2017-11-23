@@ -15,8 +15,7 @@ class PlanetsHandbookApp : Application()
 {
     companion object
     {
-        var repository: Repository? = null
-            private set
+        lateinit var repository: Repository private set
     }
 
     override fun onCreate()

@@ -1,6 +1,5 @@
 package com.maff.planetshandbook.ui.details
 
-import android.net.Uri
 import com.maff.planetshandbook.data.*
 import com.maff.planetshandbook.ui.BasePresenter
 import com.maff.planetshandbook.ui.PresenterView
@@ -14,7 +13,7 @@ interface DetailsContract
     interface View : PresenterView<DetailsContract.Presenter>
     {
         fun showPlanetInfo(
-                planet: Planet?,
+                planet: Planet,
                 categories: Collection<PlanetCategory>,
                 probes: Collection<Probe>)
         fun showParameterDetailDialog(parameter: Parameter)
@@ -27,7 +26,7 @@ interface DetailsContract
     {
         fun parameterClicked(parameter: Parameter)
         fun probeClicked(probe: Probe)
-        fun planetWikiClicked(planet: Planet)
+        fun planetWikiClicked()
         fun probeWikiClicked(probe: Probe)
         fun dialogPlanetClicked(planet: Planet)
     }

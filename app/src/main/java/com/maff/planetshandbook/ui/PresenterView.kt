@@ -6,5 +6,4 @@ package com.maff.planetshandbook.ui
 
 interface PresenterView<T: BasePresenter>
 {
-    fun setPresenter(presenter: T)
 }

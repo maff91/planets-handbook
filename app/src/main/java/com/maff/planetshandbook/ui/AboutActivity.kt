@@ -22,10 +22,8 @@ class AboutActivity : AppCompatActivity() {
         }
 
         githubBtn.setOnClickListener {
-            val page = resources.getString(R.string.github_page);
-
-            if(page != null) {
-                Utils.openWebPage(this, page)
+            resources.getString(R.string.github_page)?.let {
+                Utils.openWebPage(this, it)
             }
         }
     }

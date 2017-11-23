@@ -17,17 +17,20 @@ class DetailsPresenter(
         private val repository: Repository
 ) : DetailsContract.Presenter
 {
-    init
-    {
-        view.setPresenter(this)
-    }
+    lateinit var planet: Planet
 
     override fun start()
     {
-        view.showPlanetInfo(
-                repository.getPlanet(planetName),
-                repository.getParametersByPlanet(planetName),
-                repository.getProbesByPlanet(planetName))
+        val planet = repository.getPlanet(planetName)
+
+        if(planet != null) {
+            this.planet = planet
+
+            view.showPlanetInfo(
+                    planet,
+                    repository.getParametersByPlanet(planetName),
+                    repository.getProbesByPlanet(planetName))
+        }
     }
 
     override fun parameterClicked(parameter: Parameter)
@@ -40,7 +43,7 @@ class DetailsPresenter(
         view.showProbeDetailDialog(probe)
     }
 
-    override fun planetWikiClicked(planet: Planet)
+    override fun planetWikiClicked()
     {
         if (!planet.wiki.isEmpty())
         {
