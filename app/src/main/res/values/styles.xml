@@ -53,5 +53,10 @@
         <item name="android:textSize">18sp</item>
     </style>
 
+    <style name="AppTheme.TextAppearance.DialogHeader">
+        <item name="android:textColor">@color/text_light_primary</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">18sp</item>
+    </style>
 
 </resources>
