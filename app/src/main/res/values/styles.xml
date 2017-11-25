@@ -40,5 +40,18 @@
         <item name="android:textSize">26sp</item>
     </style>
 
+    <style name="AppTheme.TextAppearance.ListHeader">
+        <item name="android:textColor">@color/text_light_primary</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="AppTheme.TextAppearance.ListItemText">
+        <item name="android:textColor">@color/text_dark_primary</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
 
 </resources>

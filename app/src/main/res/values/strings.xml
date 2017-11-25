@@ -12,4 +12,5 @@
     <string name="planets">Planets</string>
     <string name="planet_fig_content_description">Planet Illustration</string>
     <string name="wiki_page">Wiki Page</string>
+    <string name="probesHeaderText">Probes visited</string>
 </resources>

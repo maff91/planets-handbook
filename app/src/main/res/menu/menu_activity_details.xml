@@ -5,6 +5,6 @@
     <item
         android:id="@+id/wikiBtn"
         android:icon="@drawable/ic_wiki_32dp"
-        android:title="@string/wiki_page"
+        android:name="@string/wiki_page"
         app:showAsAction="always" />
 </menu>

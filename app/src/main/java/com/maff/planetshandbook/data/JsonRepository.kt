@@ -43,12 +43,8 @@ class JsonRepository @DebugLog constructor(@NonNull inputStream: InputStream) : 
             Timber.e(ex)
         }
 
-        //probesByPlanet = LinkedHashMap()
         parameters = LinkedHashMap()
-
-        // Perform mapping operations
         fillParametersMap()
-//        fillProbesPlanetMap()
     }
 
     private fun fillParametersMap()
@@ -57,17 +53,6 @@ class JsonRepository @DebugLog constructor(@NonNull inputStream: InputStream) : 
             category.parameters.forEach { parameters.put(it.name, it) }
         }
     }
-
-//    private fun fillProbesPlanetMap()
-//    {
-//        probesByPlanet.putAll(planets.keys.map { Pair(it, ArrayList<Probe>()) })
-//
-//        for(probe in probes.values) {
-//            for(planet in probe.planets) {
-//                probesByPlanet[planet]?.add(probe)
-//            }
-//        }
-//    }
 
     override fun getAllPlanets(): Collection<Planet> {
         return planets.values
@@ -86,8 +71,8 @@ class JsonRepository @DebugLog constructor(@NonNull inputStream: InputStream) : 
     }
 
     @DebugLog
-    override fun getProbesByPlanet(name: String): Collection<Probe> {
-        return probes.values.filter { it.name.equals(name, true) }
+    override fun getProbesByPlanet(planetName: String): Collection<Probe> {
+        return probes.values.filter { it.planets.contains(planetName) }
     }
 
     @DebugLog

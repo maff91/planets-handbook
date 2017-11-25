@@ -31,6 +31,10 @@ class DetailsPresenter(
                     repository.getParametersByPlanet(planetName),
                     repository.getProbesByPlanet(planetName))
         }
+        else
+        {
+            view.close()
+        }
     }
 
     override fun parameterClicked(parameter: Parameter)

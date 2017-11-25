@@ -21,7 +21,7 @@ class DetailsPresenterTest {
 
     @Before
     fun before() {
-        presenter = DetailsPresenter(PLANET.name!!, view, repo)
+        presenter = DetailsPresenter(PLANET.name, view, repo)
     }
 
     @Test
@@ -30,14 +30,24 @@ class DetailsPresenterTest {
         val params = FakeData.getParams()
         val probes = FakeData.getProbes()
 
-        Mockito.`when`(repo.getPlanet(PLANET.name!!)).thenReturn(planet)
-        Mockito.`when`(repo.getParametersByPlanet(PLANET.name!!)).thenReturn(params)
-        Mockito.`when`(repo.getProbesByPlanet(PLANET.name!!)).thenReturn(probes)
+        Mockito.`when`(repo.getPlanet(PLANET.name)).thenReturn(planet)
+        Mockito.`when`(repo.getParametersByPlanet(PLANET.name)).thenReturn(params)
+        Mockito.`when`(repo.getProbesByPlanet(PLANET.name)).thenReturn(probes)
 
         presenter.start()
 
         Mockito.verify(view).showPlanetInfo(planet, params, probes)
     }
+
+    @Test
+    fun startWrongName() {
+        Mockito.`when`(repo.getPlanet(PLANET.name)).thenReturn(null)
+
+        presenter.start()
+
+        Mockito.verify(view).close()
+    }
+
 
     @Test
     fun parameterClicked() {
@@ -55,7 +65,8 @@ class DetailsPresenterTest {
 
     @Test
     fun planetWikiClicked() {
-        presenter.planetWikiClicked(PLANET)
+        start()
+        presenter.planetWikiClicked()
         Mockito.verify(view).showWebPage(PLANET.wiki)
     }
 

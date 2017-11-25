@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
+import com.maff.planetshandbook.PlanetDrawables
 import com.maff.planetshandbook.PlanetsHandbookApp
 import com.maff.planetshandbook.R
 import com.maff.planetshandbook.Utils
@@ -12,8 +13,7 @@ import com.maff.planetshandbook.data.Parameter
 import com.maff.planetshandbook.data.Planet
 import com.maff.planetshandbook.data.PlanetCategory
 import com.maff.planetshandbook.data.Probe
-import com.maff.planetshandbook.ui.HideTitleOffsetListener
-import com.maff.planetshandbook.ui.list.MainListAdapter
+import com.maff.planetshandbook.ui.TitleOffsetController
 import kotlinx.android.synthetic.main.activity_details.*
 
 class DetailsActivity : AppCompatActivity(), DetailsContract.View {
@@ -22,6 +22,7 @@ class DetailsActivity : AppCompatActivity(), DetailsContract.View {
     }
 
     private lateinit var presenter: DetailsContract.Presenter
+    private lateinit var titleController: TitleOffsetController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,13 +30,16 @@ class DetailsActivity : AppCompatActivity(), DetailsContract.View {
 
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        appBarLayout.addOnOffsetChangedListener(HideTitleOffsetListener(collapsingToolbarLayout))
 
-        recycler.adapter = MainListAdapter()
+        titleController = TitleOffsetController(collapsingToolbarLayout)
+        appBarLayout.addOnOffsetChangedListener(titleController)
+
         recycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         val planetName = if(intent.extras != null) intent.extras.getString(PLANET_NAME_EXTRA, "") else  ""
+
         presenter = DetailsPresenter(planetName, this, PlanetsHandbookApp.repository)
+        presenter.start()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -52,7 +56,14 @@ class DetailsActivity : AppCompatActivity(), DetailsContract.View {
     }
 
     override fun showPlanetInfo(planet: Planet, categories: Collection<PlanetCategory>, probes: Collection<Probe>) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        titleController.title = planet.name
+        planetName.text = planet.name
+
+        PlanetDrawables.getHeader(planet)?.let {
+            planetImage.setImageResource(it)
+        }
+
+        recycler.adapter = DetailsAdapter(this, categories, probes)
     }
 
     override fun showParameterDetailDialog(parameter: Parameter) {
@@ -65,5 +76,10 @@ class DetailsActivity : AppCompatActivity(), DetailsContract.View {
 
     override fun showWebPage(url: String) {
         Utils.openWebPage(this, url)
+    }
+
+    override fun close()
+    {
+        finish()
     }
 }

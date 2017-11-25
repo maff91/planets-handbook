@@ -10,7 +10,7 @@ import com.maff.planetshandbook.PlanetsHandbookApp
 import com.maff.planetshandbook.R
 import com.maff.planetshandbook.data.Planet
 import com.maff.planetshandbook.ui.AboutActivity
-import com.maff.planetshandbook.ui.HideTitleOffsetListener
+import com.maff.planetshandbook.ui.TitleOffsetController
 import com.maff.planetshandbook.ui.details.DetailsActivity
 
 import kotlinx.android.synthetic.main.activity_list.*
@@ -23,7 +23,7 @@ class ListActivity : AppCompatActivity(), ListContract.View {
         setContentView(R.layout.activity_list)
 
         setSupportActionBar(toolbar)
-        appBarLayout.addOnOffsetChangedListener(HideTitleOffsetListener(collapsingToolbarLayout))
+        appBarLayout.addOnOffsetChangedListener(TitleOffsetController(collapsingToolbarLayout))
 
         recycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
@@ -63,7 +63,7 @@ class ListActivity : AppCompatActivity(), ListContract.View {
 
     private fun startDetailsActivity(planet: Planet) {
         val intent = Intent(this@ListActivity, DetailsActivity::class.java)
-        intent.extras.putString(DetailsActivity.PLANET_NAME_EXTRA, planet.shortName)
+        intent.putExtra(DetailsActivity.PLANET_NAME_EXTRA, planet.name)
         startActivity(intent)
     }
 }

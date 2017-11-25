@@ -59,6 +59,6 @@ class PlanetListAdapter(planets: Collection<Planet>) : RecyclerView.Adapter<Plan
     class ViewHolder(rootView: View) : RecyclerView.ViewHolder(rootView)
     {
         val image = rootView.findViewById<ImageView>(R.id.image)
-        val name = rootView.findViewById<TextView>(R.id.text)
+        val name = rootView.findViewById<TextView>(R.id.name)
     }
 }

@@ -20,6 +20,7 @@ interface DetailsContract
         fun showProbeDetailDialog(probe: Probe)
         fun showWebPage(url: String)
         fun showPlanetDetails(planet: Planet) {}
+        fun close()
     }
 
     interface Presenter : BasePresenter

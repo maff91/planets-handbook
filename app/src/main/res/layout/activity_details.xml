@@ -9,7 +9,7 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:gravity="bottom"
         android:theme="@style/AppTheme.AppBarOverlay"
         android:background="@color/dark_bg"
@@ -24,19 +24,20 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
-            app:title="Saturn"
+            app:title="Test"
             app:expandedTitleTextAppearance="@style/AppTheme.TextAppearance.Invisible"
             >
 
             <ImageView
+                android:id="@+id/planetImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:scaleType="fitEnd"
-                android:src="@drawable/saturn_header"
                 android:fitsSystemWindows="true"
                 android:contentDescription="@string/planet_fig_content_description"
                 app:layout_collapseMode="parallax"
+                tools:src="@drawable/saturn_header"
                 />
 
             <ImageView
@@ -50,6 +51,7 @@
                 />
 
             <TextView
+                android:id="@+id/planetName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end|bottom"
@@ -57,7 +59,7 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginBottom="4dp"
                 android:includeFontPadding="false"
-                android:text="Saturn"
+                tools:text="Saturn"
                 />
 
             <android.support.v7.widget.Toolbar
@@ -78,6 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="@color/semi_light_bg"
         />
 
 </android.support.design.widget.CoordinatorLayout>
