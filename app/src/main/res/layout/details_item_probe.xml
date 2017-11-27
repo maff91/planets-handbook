@@ -9,25 +9,43 @@
     android:background="@color/light_bg"
     android:foreground="?android:attr/selectableItemBackground">
 
-    <ImageView
-        android:id="@+id/flag"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+    <com.maff.planetshandbook.ui.widgets.MultiIconView
+        android:id="@+id/flags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/border"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="12dp"
-        android:layout_marginStart="16dp"
-        style="@style/AppTheme.TextAppearance.ListItemText"
-        tools:src="@drawable/flag_usa"
-        />
+        android:paddingStart="4dp"
+        >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="12dp"
+            style="@style/AppTheme.TextAppearance.ListItemText"
+            tools:src="@drawable/flag_usa"
+            />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="12dp"
+            style="@style/AppTheme.TextAppearance.ListItemText"
+            tools:src="@drawable/flag_eu"
+            />
+
+    </com.maff.planetshandbook.ui.widgets.MultiIconView>
 
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/flag"
+        app:layout_constraintStart_toEndOf="@id/flags"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/border"
         android:layout_marginTop="12dp"
