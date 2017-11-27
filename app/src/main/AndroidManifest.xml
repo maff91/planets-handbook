@@ -14,7 +14,8 @@
         <activity
             android:name=".ui.list.ListActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/planets">
+            android:label="@string/planets"
+            android:screenOrientation="userPortrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,19 +25,14 @@
 
         <activity
             android:name=".ui.details.DetailsActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="userPortrait"/>
 
         <activity
             android:name=".ui.AboutActivity"
             android:label="@string/title_activity_about"
-            android:theme="@style/AppTheme.NoActionBar" />
-
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="userPortrait"/>
 
     </application>
 

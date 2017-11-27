@@ -20,7 +20,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:padding="16dp"
             android:gravity="center"
-            android:background="@color/header_odd_bg"
+            android:background="@color/header_even_bg"
             android:textAppearance="@style/AppTheme.TextAppearance.DialogHeader"
             tools:text="Mariner 11"
             />

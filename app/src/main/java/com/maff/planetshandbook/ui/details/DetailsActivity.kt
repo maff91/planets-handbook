@@ -109,7 +109,7 @@ class DetailsActivity : AppCompatActivity(), DetailsContract.View,
 
     override fun showPlanet(planet: Planet) {
         presenter.planetSelected(planet)
-        appBarLayout.setExpanded(true, true)
+        appBarLayout.setExpanded(true, false)
         recycler.scrollTo(0, 0)
     }
 }

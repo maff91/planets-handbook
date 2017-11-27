@@ -47,23 +47,19 @@ class ListActivity : AppCompatActivity(), ListContract.View {
     override fun showPlanets(planets: Collection<Planet>) {
         val adapter = PlanetListAdapter(planets)
 
-        adapter.setItemClickListener { p -> startDetailsActivity(p) }
+        adapter.setItemClickListener { p -> presenter.planetClicked(p) }
 
         recycler.adapter = adapter
     }
 
 
     override fun showPlanetDetails(planet: Planet) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val intent = Intent(this@ListActivity, DetailsActivity::class.java)
+        intent.putExtra(DetailsActivity.PLANET_NAME_EXTRA, planet.name)
+        startActivity(intent)
     }
 
     override fun showAboutPage() {
         startActivity(Intent(this, AboutActivity::class.java))
-    }
-
-    private fun startDetailsActivity(planet: Planet) {
-        val intent = Intent(this@ListActivity, DetailsActivity::class.java)
-        intent.putExtra(DetailsActivity.PLANET_NAME_EXTRA, planet.name)
-        startActivity(intent)
     }
 }
