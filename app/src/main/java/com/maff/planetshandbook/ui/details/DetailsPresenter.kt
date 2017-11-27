@@ -12,7 +12,7 @@ import com.maff.planetshandbook.data.Repository
  */
 
 class DetailsPresenter(
-        private val planetName: String,
+        private var planetName: String,
         private val view:  DetailsContract.View,
         private val repository: Repository
 ) : DetailsContract.Presenter
@@ -42,6 +42,8 @@ class DetailsPresenter(
         if(planet.name == planetName) {
             return
         }
+
+        planetName = planet.name
 
         view.showPlanetInfo(
                 planet,

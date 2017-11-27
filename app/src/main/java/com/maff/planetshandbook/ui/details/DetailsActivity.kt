@@ -116,7 +116,7 @@ class DetailsActivity : AppCompatActivity(), DetailsContract.View,
     override fun showPlanet(planet: Planet) {
         presenter.planetSelected(planet)
         appBarLayout.setExpanded(true, false)
-        recycler.scrollTo(0, 0)
+        recycler.scrollToPosition(0)
     }
 
     fun isAnyDialogOpened(): Boolean

@@ -30,9 +30,15 @@ class MultiIconView : LinearLayout {
 
         if(resourceIds.isEmpty()) {
             removeAllViews()
+            return
         }
 
         removeNonImageViews()
+
+        // Remove redundant views
+        if(childCount > resourceIds.size) {
+            removeViews(0, childCount - resourceIds.size)
+        }
 
         // Fill images with resIds
         for((index, resId) in resourceIds.withIndex())
@@ -50,11 +56,6 @@ class MultiIconView : LinearLayout {
                 view.layoutParams = sampleParams
                 view.setImageResource(resId)
             }
-        }
-
-        // Remove unused views`
-        if(childCount > resourceIds.size) {
-            removeViews(childCount - 1, childCount - resourceIds.size)
         }
     }
 

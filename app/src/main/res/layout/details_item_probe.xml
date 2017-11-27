@@ -29,16 +29,6 @@
             tools:src="@drawable/flag_usa"
             />
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="12dp"
-            android:layout_marginStart="12dp"
-            style="@style/AppTheme.TextAppearance.ListItemText"
-            tools:src="@drawable/flag_eu"
-            />
-
     </com.maff.planetshandbook.ui.widgets.MultiIconView>
 
     <TextView
