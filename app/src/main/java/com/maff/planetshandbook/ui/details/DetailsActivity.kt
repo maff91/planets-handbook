@@ -85,6 +85,9 @@ class DetailsActivity : AppCompatActivity(), DetailsContract.View,
     }
 
     override fun showParameterDetailDialog(parameter: Parameter) {
+        if(isAnyDialogOpened())
+            return
+
         val dialog = ParameterDialogFragment()
         ParameterDialogPresenter(parameter, dialog, PlanetsHandbookApp.repository)
         dialog.listener = this
@@ -92,6 +95,9 @@ class DetailsActivity : AppCompatActivity(), DetailsContract.View,
     }
 
     override fun showProbeDetailDialog(probe: Probe) {
+        if(isAnyDialogOpened())
+            return
+
         val dialog = ProbeDialogFragment()
         ProbeDialogPresenter(probe, dialog, PlanetsHandbookApp.repository)
         dialog.listener = this
@@ -111,5 +117,18 @@ class DetailsActivity : AppCompatActivity(), DetailsContract.View,
         presenter.planetSelected(planet)
         appBarLayout.setExpanded(true, false)
         recycler.scrollTo(0, 0)
+    }
+
+    fun isAnyDialogOpened(): Boolean
+    {
+        if(fragmentManager.findFragmentByTag(ProbeDialogFragment::class.java.simpleName) != null) {
+            return true
+        }
+
+        if(fragmentManager.findFragmentByTag(ParameterDialogFragment::class.java.simpleName) != null) {
+            return true
+        }
+
+        return false
     }
 }
