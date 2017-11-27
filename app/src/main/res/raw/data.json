@@ -48,7 +48,7 @@
             "parameters": [
                 {
                     "name": "Radius",
-                    "format": "$f Earths",
+                    "format": "%.2f Earths",
                     "values": {
                         "Mercury": 0.383,
                         "Venus": 0.9499,
@@ -62,7 +62,7 @@
                 },
                 {
                     "name": "Mass",
-                    "format": "$f Earths",
+                    "format": "%.2f Earths",
                     "values": {
                         "Mercury": 0.055,
                         "Venus": 0.815,
@@ -76,7 +76,7 @@
                 },
                 {
                     "name": "Density",
-                    "format": "$f g/cm3",
+                    "format": "%.2f g/cm3",
                     "values": {
                         "Mercury": 5.427,
                         "Venus": 5.243,
@@ -90,7 +90,7 @@
                 },
                 {
                     "name": "Gravity",
-                    "format": "$f g",
+                    "format": "%.2f g",
                     "values": {
                         "Mercury": 0.38,
                         "Venus": 0.904,
@@ -104,7 +104,7 @@
                 },
                 {
                     "name": "Escape velocity",
-                    "format": "$f km/s",
+                    "format": "%.2f km/s",
                     "values": {
                         "Mercury": 4.25,
                         "Venus": 10.36,
@@ -118,7 +118,7 @@
                 },
                 {
                     "name": "Day length",
-                    "format": "$f d",
+                    "format": "%.2f d",
                     "values": {
                         "Mercury": 58.646,
                         "Venus": 243.025,
@@ -132,7 +132,7 @@
                 },
                 {
                     "name": "Min temp.",
-                    "format": "$f 0C",
+                    "format": "%.1f °C",
                     "values": {
                         "Mercury": -193,
                         "Venus": 462,
@@ -146,7 +146,7 @@
                 },
                 {
                     "name": "Max temp.",
-                    "format": "$f 0C",
+                    "format": "%.1f °C",
                     "values": {
                         "Mercury": 427,
                         "Venus": 462,
@@ -165,7 +165,7 @@
             "parameters": [
                 {
                     "name": "Aphelion",
-                    "format": "$f AU",
+                    "format": "%.2f AU",
                     "values": {
                         "Mercury": 0.466697,
                         "Venus": 0.728213,
@@ -179,10 +179,10 @@
                 },
                 {
                     "name": "Perihelion",
-                    "format": "$f AU",
+                    "format": "%.2f AU",
                     "values": {
                         "Mercury": 0.307499,
-                        "Venus": 718440,
+                        "Venus": 0.718440,
                         "Earth": 0.98327,
                         "Mars": 1.3814,
                         "Jupiter": 4.9501,
@@ -193,7 +193,7 @@
                 },
                 {
                     "name": "Orbital period",
-                    "format": "$f yr",
+                    "format": "%.2f yr",
                     "values": {
                         "Mercury": 0.240846,
                         "Venus": 0.615198,
@@ -207,7 +207,7 @@
                 },
                 {
                     "name": "Orbital speed",
-                    "format": "$f km/s",
+                    "format": "%.2f km/s",
                     "values": {
                         "Mercury": 47.362,
                         "Venus": 35.02,
@@ -221,7 +221,7 @@
                 },
                 {
                     "name": "Satellites",
-                    "format": "$i",
+                    "format": "%.0f",
                     "values": {
                         "Mercury": 0,
                         "Venus": 0,

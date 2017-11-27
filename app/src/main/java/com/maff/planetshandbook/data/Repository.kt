@@ -12,7 +12,7 @@ interface Repository
     fun getProbe(name: String): Probe?
     fun getParameter(name: String) : Parameter?
 
-    fun getProbesByPlanet(name: String) : Collection<Probe>
+    fun getProbesByPlanet(planetName: String) : Collection<Probe>
     fun getPlanetsByProbe(name: String): Collection<Planet>
     fun getParametersByPlanet(name: String): Collection<PlanetCategory>
 }

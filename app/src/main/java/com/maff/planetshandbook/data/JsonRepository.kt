@@ -103,7 +103,7 @@ class JsonRepository @DebugLog constructor(@NonNull inputStream: InputStream) : 
 
             // Add non-empty category
             if(params.size > 0) {
-                result.add(PlanetCategory(category.name ?: continue, params))
+                result.add(PlanetCategory(category.name, params))
             }
         }
         return result
