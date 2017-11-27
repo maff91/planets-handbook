@@ -30,5 +30,6 @@ interface DetailsContract
         fun planetWikiClicked()
         fun probeWikiClicked(probe: Probe)
         fun dialogPlanetClicked(planet: Planet)
+        fun planetSelected(planet: Planet)
     }
 }

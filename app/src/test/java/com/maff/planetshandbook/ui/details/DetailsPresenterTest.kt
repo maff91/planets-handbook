@@ -5,6 +5,7 @@ import org.junit.Test
 
 import org.junit.Before
 import org.mockito.Mockito
+import org.mockito.Mockito.*
 
 /**
  * Created by maff on 11/5/2017.
@@ -26,13 +27,13 @@ class DetailsPresenterTest {
 
     @Test
     fun start() {
-        val planet = FakeData.getPlanet()
+        val planet = PLANET
         val params = FakeData.getParams()
         val probes = FakeData.getProbes()
 
-        Mockito.`when`(repo.getPlanet(PLANET.name)).thenReturn(planet)
-        Mockito.`when`(repo.getParametersByPlanet(PLANET.name)).thenReturn(params)
-        Mockito.`when`(repo.getProbesByPlanet(PLANET.name)).thenReturn(probes)
+        `when`(repo.getPlanet(PLANET.name)).thenReturn(planet)
+        `when`(repo.getParametersByPlanet(PLANET.name)).thenReturn(params)
+        `when`(repo.getProbesByPlanet(PLANET.name)).thenReturn(probes)
 
         presenter.start()
 
@@ -40,12 +41,27 @@ class DetailsPresenterTest {
     }
 
     @Test
+    fun planetSelected() {
+        val planet = PLANET
+        val params = FakeData.getParams()
+        val probes = FakeData.getProbes()
+
+        `when`(repo.getParametersByPlanet(PLANET.name)).thenReturn(params)
+        `when`(repo.getProbesByPlanet(PLANET.name)).thenReturn(probes)
+
+        presenter.planetSelected(planet)
+        presenter.planetSelected(planet)
+
+        Mockito.verify(view, times(1)).showPlanetInfo(planet, params, probes)
+    }
+
+    @Test
     fun startWrongName() {
-        Mockito.`when`(repo.getPlanet(PLANET.name)).thenReturn(null)
+        `when`(repo.getPlanet(PLANET.name)).thenReturn(null)
 
         presenter.start()
 
-        Mockito.verify(view).close()
+        verify(view).close()
     }
 
 
@@ -53,34 +69,34 @@ class DetailsPresenterTest {
     fun parameterClicked() {
         val param = FakeData.getParam()
         presenter.parameterClicked(param)
-        Mockito.verify(view).showParameterDetailDialog(param)
+        verify(view).showParameterDetailDialog(param)
     }
 
     @Test
     fun probeClicked() {
         val probe = FakeData.getProbe()
         presenter.probeClicked(probe)
-        Mockito.verify(view).showProbeDetailDialog(probe)
+        verify(view).showProbeDetailDialog(probe)
     }
 
     @Test
     fun planetWikiClicked() {
         start()
         presenter.planetWikiClicked()
-        Mockito.verify(view).showWebPage(PLANET.wiki)
+        verify(view).showWebPage(PLANET.wiki)
     }
 
     @Test
     fun probeWikiClicked() {
         val probe = FakeData.getProbe()
         presenter.probeWikiClicked(probe)
-        Mockito.verify(view).showWebPage(probe.wiki)
+        verify(view).showWebPage(probe.wiki)
     }
 
     @Test
     fun dialogPlanetClicked() {
         presenter.dialogPlanetClicked(PLANET)
-        Mockito.verify(view).showPlanetDetails(PLANET)
+        verify(view).showPlanetDetails(PLANET)
     }
 
 }

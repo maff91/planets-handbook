@@ -4,15 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
     android:background="@color/light_bg"
     android:foreground="?android:attr/selectableItemBackground">
 
     <ImageView
-        android:id="@+id/flag"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:id="@+id/planetImage"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/border"
@@ -20,36 +18,35 @@
         android:layout_marginBottom="12dp"
         android:layout_marginStart="16dp"
         style="@style/AppTheme.TextAppearance.ListItemText"
-        tools:src="@drawable/flag_usa"
+        tools:src="@drawable/saturn_small"
         />
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/planetName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/flag"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/planetImage"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="12dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="12dp"
         style="@style/AppTheme.TextAppearance.ListItemText"
-        tools:text="Cassini"
+        tools:text="SA"
         />
 
-    <ImageButton
-        android:id="@+id/wikiBtn"
-        android:contentDescription="@string/wiki_page"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/border"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="12dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_wiki_bordered_24dp"
-        android:background="?android:attr/selectableItemBackgroundBorderless"
+        style="@style/AppTheme.TextAppearance.ListItemText"
+        tools:text="Cassini"
         />
 
     <View

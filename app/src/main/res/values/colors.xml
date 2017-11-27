@@ -7,8 +7,8 @@
     <color name="text_dark_primary">#333333</color>
     <color name="border">#cccccc</color>
 
-    <color name="header_odd_bg">#B23223</color>
-    <color name="header_even_bg">#1B6080</color>
+    <color name="header_odd_bg">#1B6080</color>
+    <color name="header_even_bg">#B23223</color>
     <color name="darken">#33291B29</color>
     <color name="semi_light_bg">#E6E6E6</color>
 </resources>

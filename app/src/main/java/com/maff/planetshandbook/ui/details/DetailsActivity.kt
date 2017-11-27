@@ -16,7 +16,9 @@ import com.maff.planetshandbook.data.Probe
 import com.maff.planetshandbook.ui.TitleOffsetController
 import kotlinx.android.synthetic.main.activity_details.*
 
-class DetailsActivity : AppCompatActivity(), DetailsContract.View {
+class DetailsActivity : AppCompatActivity(), DetailsContract.View,
+        ProbeDialogFragment.Listener, ParameterDialogFragment.Listener
+{
     companion object {
         val PLANET_NAME_EXTRA: String = "planetName"
     }
@@ -63,15 +65,37 @@ class DetailsActivity : AppCompatActivity(), DetailsContract.View {
             planetImage.setImageResource(it)
         }
 
-        recycler.adapter = DetailsAdapter(this, categories, probes)
+        val adapter =  DetailsAdapter(this, categories, probes)
+        adapter.listener = object : DetailsAdapter.Listener
+        {
+            override fun paramSelected(param: Parameter) {
+                presenter.parameterClicked(param)
+            }
+
+            override fun probeSelected(probe: Probe) {
+                presenter.probeClicked(probe)
+            }
+
+            override fun wikiRequiredFor(probe: Probe) {
+                presenter.probeWikiClicked(probe)
+            }
+
+        }
+        recycler.adapter = adapter
     }
 
     override fun showParameterDetailDialog(parameter: Parameter) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val dialog = ParameterDialogFragment()
+        ParameterDialogPresenter(parameter, dialog, PlanetsHandbookApp.repository)
+        dialog.listener = this
+        dialog.show(fragmentManager, ParameterDialogFragment::class.java.simpleName)
     }
 
     override fun showProbeDetailDialog(probe: Probe) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val dialog = ProbeDialogFragment()
+        ProbeDialogPresenter(probe, dialog, PlanetsHandbookApp.repository)
+        dialog.listener = this
+        dialog.show(fragmentManager, ProbeDialogFragment::class.java.simpleName)
     }
 
     override fun showWebPage(url: String) {
@@ -81,5 +105,11 @@ class DetailsActivity : AppCompatActivity(), DetailsContract.View {
     override fun close()
     {
         finish()
+    }
+
+    override fun showPlanet(planet: Planet) {
+        presenter.planetSelected(planet)
+        appBarLayout.setExpanded(true, true)
+        recycler.scrollTo(0, 0)
     }
 }

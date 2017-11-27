@@ -37,6 +37,18 @@ class DetailsPresenter(
         }
     }
 
+    override fun planetSelected(planet: Planet) {
+        //Ignore in case the same planet has been chosen
+        if(planet.name == planetName) {
+            return
+        }
+
+        view.showPlanetInfo(
+                planet,
+                repository.getParametersByPlanet(planetName),
+                repository.getProbesByPlanet(planetName))
+    }
+
     override fun parameterClicked(parameter: Parameter)
     {
         view.showParameterDetailDialog(parameter)
