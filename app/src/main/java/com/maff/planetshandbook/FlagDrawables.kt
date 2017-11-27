@@ -20,6 +20,7 @@ object FlagDrawables
             Pair("IT", R.drawable.flag_italy),
             Pair("DE", R.drawable.flag_germany),
             Pair("USSR", R.drawable.flag_ussr),
-            Pair("JP", R.drawable.flag_japan)
+            Pair("JP", R.drawable.flag_japan),
+            Pair("IN", R.drawable.flag_india)
     )
 }
