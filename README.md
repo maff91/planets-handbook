@@ -10,8 +10,8 @@ Special thanks to Christopher Jones whose artwork was used in the application de
 
 ## Screenshots
 
-![Main Screen](https://github.com/maff91/planets-handbook/blob/master/screenshots/Screenshot_1511980870.png =300x)
-![Details Screen](https://github.com/maff91/planets-handbook/blob/master/screenshots/Screenshot_1511981096.png = 300x)
+![Main Screen](https://github.com/maff91/planets-handbook/blob/master/screenshots/Screenshot_1511980870.png)
+![Details Screen](https://github.com/maff91/planets-handbook/blob/master/screenshots/Screenshot_1511981096.png)
 
 ## Licence
 
