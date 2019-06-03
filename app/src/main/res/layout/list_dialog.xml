@@ -6,7 +6,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_height="@dimen/dialog_height"
         android:layout_width="@dimen/dialog_width"
         >
@@ -34,7 +34,7 @@
             android:background="@color/darken"
             />
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -59,6 +59,6 @@
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:text="@string/ok"/>
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

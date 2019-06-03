@@ -1,7 +1,7 @@
 package com.maff.planetshandbook.ui
 
-import android.support.design.widget.AppBarLayout
-import android.support.design.widget.CollapsingToolbarLayout
+import com.google.android.material.appbar.AppBarLayout
+import com.google.android.material.appbar.CollapsingToolbarLayout
 
 /**
  * Created by michael on 20/11/2017.

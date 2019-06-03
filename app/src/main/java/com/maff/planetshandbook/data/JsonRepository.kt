@@ -1,6 +1,6 @@
 package com.maff.planetshandbook.data
 
-import android.support.annotation.NonNull
+import androidx.annotation.NonNull
 import com.google.gson.Gson
 import hugo.weaving.DebugLog
 import timber.log.Timber
