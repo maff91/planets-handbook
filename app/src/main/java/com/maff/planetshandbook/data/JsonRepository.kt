@@ -2,7 +2,6 @@ package com.maff.planetshandbook.data
 
 import androidx.annotation.NonNull
 import com.google.gson.Gson
-import hugo.weaving.DebugLog
 import timber.log.Timber
 import java.io.*
 
@@ -10,12 +9,11 @@ import java.io.*
  * Created by maff on 10/31/2017.
  */
 
-class JsonRepository @DebugLog constructor(@NonNull inputStream: InputStream) : Repository
+class JsonRepository constructor(@NonNull inputStream: InputStream) : Repository
 {
     private val planets: Map<String, Planet>
     private val categories: Map<String, Category>
     private val probes: Map<String, Probe>
-//    private var probesByPlanet: MutableMap<String, MutableList<Probe>>
     private val parameters: MutableMap<String, Parameter>
 
     init
@@ -70,12 +68,10 @@ class JsonRepository @DebugLog constructor(@NonNull inputStream: InputStream) : 
         return parameters[name]
     }
 
-    @DebugLog
     override fun getProbesByPlanet(planetName: String): Collection<Probe> {
         return probes.values.filter { it.planets.contains(planetName) }
     }
 
-    @DebugLog
     override fun getPlanetsByProbe(name: String): Collection<Planet> {
         val result = ArrayList<Planet>()
         val planetNames = probes[name]?.planets
@@ -89,7 +85,6 @@ class JsonRepository @DebugLog constructor(@NonNull inputStream: InputStream) : 
         return result
     }
 
-    @DebugLog
     override fun getParametersByPlanet(name: String) : Collection<PlanetCategory> {
         val result = ArrayList<PlanetCategory>()
 
